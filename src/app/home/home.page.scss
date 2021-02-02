@@ -1,0 +1,172 @@
+ion-toolbar {
+  --ion-toolbar-background: #ff0000;
+}
+ion-title {
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$imgSize: 80px;
+$size: 40px;
+$fontSize: 14px;
+$labelFontSize: 12px;
+
+.container {
+  margin: $size 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  row-gap: $size;
+  padding: 10px;
+  .box {
+    margin: 5px;
+    border-radius: 4px;
+    background: #444444;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &.grass {
+      background: #209483;
+    }
+    &.fire {
+      background: #ee6239;
+    }
+    &.water {
+      background: #5a9ca4;
+    }
+    &.bug {
+      background: #31ac41;
+    }
+    &.normal {
+      background: #a4625a;
+    }
+    &.poison {
+      background: #cd62b4;
+    }
+    &.electric {
+      background: #f6e652;
+    }
+    &.ground {
+      background: #cdb400;
+    }
+    &.fairy {
+      background: #ffd5bd;
+    }
+    &.fighting {
+      background: #d5ac9c;
+    }
+    &.psychic {
+      background: #ffe629;
+    }
+    &.rock {
+      background: #9c9483;
+    }
+    &.ghost {
+      background: #d5accd;
+    }
+    &.ice {
+      background: #add8e6;
+    }
+    &.dragon {
+      background: #de7339;
+    }
+    .pokeImage {
+      position: relative;
+      text-align: right;
+      padding-top: $size;
+      img {
+        width: $imgSize;
+        position: absolute;
+        top: -$size;
+        right: 0;
+      }
+    }
+    .types {
+      display: flex;
+      gap: 5px;
+      padding: 5px;
+      .label {
+        color: rgb(255, 255, 255, 0.7);
+        border-radius: 100px;
+        font-size: $labelFontSize;
+        padding: 0px 5px;
+        font-weight: 500;
+        background-color: rgb(255, 255, 255, 0.1);
+        text-transform: capitalize;
+      }
+    }
+    .name {
+      font-size: $fontSize;
+      font-weight: 600;
+      padding: 5px 10px 10px 10px;
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  $imgSize: 100px;
+  $size: 50px;
+  $fontSize: 16px;
+  $labelFontSize: 14px;
+  .container {
+    margin: $size 0 0 0;
+    row-gap: $size;
+    grid-template-columns: repeat(4, 1fr);
+    .box {
+      .pokeImage {
+        padding-top: $size;
+        img {
+          width: $imgSize;
+          top: -$size;
+        }
+      }
+      .types {
+        .label {
+          font-size: $labelFontSize;
+        }
+      }
+      .name {
+        font-size: $fontSize;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  $imgSize: 150px;
+  $size: 75px;
+  $fontSize: 18px;
+  $labelFontSize: 16px;
+  .container {
+    margin: $size 0 0 0;
+    row-gap: $size;
+    grid-template-columns: repeat(6, 1fr);
+    .box {
+      .pokeImage {
+        padding-top: $size;
+        img {
+          width: $imgSize;
+          top: -$size;
+        }
+      }
+      .types {
+        .label {
+          font-size: $labelFontSize;
+        }
+      }
+      .name {
+        font-size: $fontSize;
+      }
+    }
+  }
+}

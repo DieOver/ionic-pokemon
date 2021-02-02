@@ -1,0 +1,8 @@
+{
+  "name": "pokemon",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "049c24ce"
+}
